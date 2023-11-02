@@ -1,0 +1,14 @@
+# Generate output.txt file
+with open("output.txt", "w") as output_file:
+    # Write model's architecture summary
+    output_file.write("Model's architecture summary:\n")
+    output_file.write(str(model.summary()) + "\n")
+
+    # Write evaluation metrics
+    output_file.write("Evaluation metrics:\n")
+    output_file.write(f"Test accuracy: {test_acc}\n")
+    output_file.write(f"Test loss: {test_loss}\n")
+
+    # Write additional insights or observations
+    output_file.write("Additional insights or observations:\n")
+    output_file.write("Add your insights here.\n")
