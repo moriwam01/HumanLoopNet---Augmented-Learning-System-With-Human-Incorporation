@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Predictions</title>
+</head>
+<body>
+    <h2>Model Predictions</h2>
+    <ul>
+        {% for prediction, image in zip(predictions, images) %}
+            <li>
+                <img src="{{ image }}" alt="Image">
+                <p>{{ prediction }}</p>
+                <form action="/collect_feedback" method="post">
+                    <label for="feedback">Feedback:</label><br>
+                    <input type="text" id="feedback" name="feedback"><br><br>
+                    <input type="submit" value="Submit Feedback">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

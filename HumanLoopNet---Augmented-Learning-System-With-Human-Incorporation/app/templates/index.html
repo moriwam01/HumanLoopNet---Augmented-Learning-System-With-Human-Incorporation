@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Prediction Review</title>
+</head>
+<body>
+    <h1>Review Model Predictions</h1>
+    <div>
+        <!-- Display the image here -->
+        <img src="{{ image_path }}" alt="Image">
+    </div>
+    <div>
+        <p>Predicted Class: {{ predicted_class }}</p>
+    </div>
+    <form action="/feedback" method="post">
+        <label for="feedback">Provide Feedback:</label><br>
+        <input type="text" id="feedback" name="feedback"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
